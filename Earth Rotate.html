@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h:hover{
+            background-color: blueviolet;
+            color: white;
+            height:100px;
+            width:300px;
+            text-align: justify;
+            overflow:hidden;
+        }
+        .f:focus{
+            background-color: black;
+            color:red;
+
+        }
+        .a:active{
+            background-color: deeppink;
+            color:white;
+            padding:10px;
+            border-radius: 10px;
+            margin:20px 10px;
+        }
+        .l:link{
+            background-color: blue;
+            color:white;
+        }
+        .v:visited{
+            color:deeppink;
+            
+        }
+        .a1:first-child{
+            background-color: blueviolet;
+        }
+        .nc a:nth-child(odd){
+            background-color: deeppink;
+            color: white;
+            padding:10px;
+        }
+        /* pseudo element */
+        .p1::first-letter{
+            color:red;
+            background-color: black;
+            /* font-family: cursive; */
+            font-size:larger;
+            text-indent: 50px;
+        }
+        .p2::first-line{
+            background-color: seagreen;
+            color:white;
+        }
+        .p3::before{
+            content:"My name is Suraj Dubey....";
+            background-color: blueviolet;
+            color:white;
+        }
+        .p4::after{
+            content:"....Thank you very much 🙏🏿🙏🏿🙏🏿🙏🏿🙏🏿";
+            background-color: aqua;
+            color:red;
+        }
+        .p5::selection{
+            background-color: indigo;
+            color:yellow;
+        }
+        .li::marker{
+            background-color: pink;
+        }
+        .tra{
+            background-color: teal;
+            width:100px;
+            height:50px;
+            color:white;
+          transition: width 3s, height 3s;
+        
+          transition-delay: 3s;
+          transition-timing-function: ease-in;
+         
+        }
+        .tra:hover{
+            width:300px;
+            height:150px;
+            background-color: green;
+          color:white;
+        }
+        .an{
+            background-color: lawngreen;
+            color:white;
+            animation-duration: 3s;
+            animation-name: cc;
+            /* animation-delay: 3s; */
+            animation-iteration-count: 5;
+            animation-timing-function: ease-in;
+        }
+        @keyframes cc{
+            from{
+                background-color: deeppink;
+                color:white;
+            }
+            to{
+                background-color:yellow;
+                color:red;
+            }
+        }
+        .div div{
+            animation-name: sa;
+            animation-duration: 2s;
+            position: relative;
+            animation-iteration-count: infinite;
+            width:80px;
+            height:50px;
+            /* border:2px solid deeppink; */
+        }
+        .div1{
+            animation-timing-function: linear;
+            width:100px;
+            height:100px;
+            background-color: yellow;
+            color:red;
+        }
+        .div2{
+            animation-timing-function: ease;
+            width:100px;
+            height:100px;
+            background-color:black;
+            color:red;
+        }
+        .div3{
+            animation-timing-function: ease-in;
+            width:100px;
+            height:100px;
+            background-color: blue;
+            color:white;
+        }
+        .div4{
+            animation-timing-function: ease-out;
+            width:100px;
+            height:100px;
+            background-color: seagreen;
+            color:white;
+        }
+        .div5{
+            animation-timing-function:ease-in-out;
+            width:100px;
+            height:100px;
+            background-color: purple;
+            color:yellow;
+        }
+        @keyframes sa {
+            0%{
+                top:100px;
+                left:0px;
+            }
+            25%{
+                top:100px;
+                left:100px;
+            }
+            50%{
+                top:200px;
+                left:100px;
+            }
+            75%{
+                top:200px;
+                left:0px;
+            }
+            100%{
+                top:100px;
+                left:0px;
+            }
+        }
+        .gra{
+            border:2px solid black;
+            width:1000px;
+            height:800px;
+            top:3100px;
+            left:200px;
+            position:absolute;
+            background-color:black;
+        }
+        .grad{
+            width:400px;
+            height:400px;
+            background-image: radial-gradient(red 5%,yellow 5%,orange 30%,grey 60%);
+            margin:200px 150px 150px 350px;
+            border-radius:190px;
+        }
+        .earth{
+            background-color: blue;
+            border-radius:100px;
+            width:80px;
+            height:80px;
+            color:white;
+            top:3170px;
+            position:absolute;
+            left:450px;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-name: earth;
+            animation-timing-function: linear;
+            /* position: relative; */
+        }
+        @keyframes earth{
+            0%{
+                top:3300px;
+                left:420px;
+            }
+            5%{
+                top:3200px;
+                left:600px;
+            }
+            10%{
+                top:3200px;
+                left:650px;
+            }
+
+            15%{
+                top:3200px;
+                left:700px;
+            }
+            20%{
+                top:3250px;
+                left:900px;
+            }
+            25%{
+                top:3300px;
+                left:950px;
+            }
+           30%{
+            top:3400px;
+            left:1000px;
+            background-color: green;
+
+           }
+           35%{
+            top:3500px;
+            left:990px;
+           }
+           40%{
+                top:3600px;
+                left:985px;
+            }
+            45%{
+                top:3650px;
+                left:950px;
+            }
+            50%{
+                top:3700px;
+                left:930px;
+                background-color: darkblue;
+            }
+            55%{
+                top:3710px;
+                left:900px;
+            }
+            60%{
+                top:3720px;
+                left:830px;
+            }
+            65%{
+                top:3730px;
+                left:760px;
+            }
+            70%{
+                top:3730px;
+                left:700px;
+                background-color: skyblue;
+            }
+            75%{
+                top:3730px;
+                left:650px;
+            }
+            80%{
+                top:3730px;
+                left:600px;
+            }
+            85%{
+                top:3700px;
+                left:480px;
+            }
+            90%{
+                top:3400px;
+                left:430px;
+                background-color: gray;
+            }
+            95%{
+                top:3360px;
+                left:420px;
+            }
+            100%{
+                top:3300px;
+                left:420px;
+            }
+
+        }
+        
+    </style>
+   
+</head>
+<body>
+    <h1>Some Revision Points</h1>
+    <h2>a. Pseudo class (:)</h2>
+    <ol>
+        <li>:hover</li>
+        <li>:focus</li>
+        <li>:active</li>
+        <li>:link</li>
+        <li>:visited</li>
+        <li>:first-child</li>
+        <li>:nth-child</li>
+        <li>:lang</li>
+    </ol>
+        <p class="h">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptatibus molestias pariatur velit exercitationem ut repellendus quisquam sit voluptas. Repellendus ipsa voluptatem amet veniam quo et deserunt, eaque dicta voluptas!</p>
+        <div >
+       <label for="fn">First name:</label>
+       <input type="text" name="first name" id="fn" class="f"><br><br>
+       <label for="ln">Last name:</label>
+       <input type="text" name="last name" id="ln">
+    </div>
+        <a href="https://www.google.com" class="a">Google</a><br><br>
+        <a href="https://www.instagram.com" class="l">Instagram</a><br>
+        <h3>visited</h3>
+        <!-- visited -->
+        <a href="https:www.facebook.com" class="v">Facebook</a><br><br>
+        <a href="https:www.facebook.com" class="v1">Meta</a>
+
+        <h3>first-child</h3>
+        <div class="fc">
+            <a href="https:www.facebook.com" class="a1">Link 1</a>
+            <br><br>
+            <a href="https:www.facebook.com" class="a1">Link 2</a><br><br>
+            <a href="https:www.facebook.com" class="a1">Link 3</a>
+            <br><br>
+            <a href="https:www.facebook.com" class="a1">Link 4</a>
+        </div>
+       <h3>:nth-child</h3>
+       <div class="nc">
+        <a href="https:www.facebook.com">Link1</a><br><br>
+        <a href="https:www.facebook.com">Link 2</a><br><br>
+        <a href="https:www.facebook.com">Link 3</a><br><br>
+        <a href="https:www.facebook.com">Link 4</a><br><br>
+        <a href="https:www.facebook.com">Link 5</a><br><br>
+        <a href="https:www.facebook.com">Link6</a><br><br>
+        <a href="https:www.facebook.com">Link 7</a><br><br>
+        <a href="https:www.facebook.com">Link 8</a><br><br>
+        <a href="https:www.facebook.com">Link 9</a><br><br>
+        <a href="https:www.facebook.com">Link 10</a><br><br>
+        <a href="https:www.facebook.com">Link 11</a><br><br>
+        <a href="https:www.facebook.com">Link 12</a><br><br>
+        <a href="https:www.facebook.com">Link 13</a><br><br>
+        <a href="https:www.facebook.com">Link 14</a><br><br>
+        <a href="https:www.facebook.com">Link 15</a><br><br>
+       </div>
+       <h2>b. Pseudo element (::)</h2>
+       <ol class="li">
+        <li>::first-letter</li>
+        <li>::first-line</li>
+        <li>::after</li>
+        <li>::before</li>
+        <li>::selection</li>
+        <li>::marker</li>
+       </ol>
+       <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam eveniet perferendis tempore alias, doloremque voluptatum officia! Fuga, commodi. Velit, iure.</p>
+       <p class="p2">Similique illum libero laboriosam quidem commodi odit quos voluptates? Rem aut dolores in, quae consequatur natus eveniet aspernatur iusto praesentium?</p>
+       <p class="p3">Nesciunt amet eos aspernatur nulla eius. Accusamus inventore consectetur consequuntur. Velit fugit, fuga saepe dolor ea obcaecati perferendis iure tempora.</p>
+       <p class="p4">Quidem, libero earum voluptate distinctio perferendis repellendus. Nostrum eius aliquid unde iusto vel non dolores, voluptas molestias adipisci ratione quibusdam.</p>
+       <p class="p5">Accusamus, consequatur? Quidem neque itaque nemo deserunt maxime, error dolorem, quis officia magni similique quibusdam pariatur quo a laboriosam eos?</p>
+       <h1>Transition</h1>
+       <h2 title="plz wait for 3s" class="tra">Transition effect applied on it</h2>
+      <h1>Animation</h1>
+      <h3 class="an">Animation</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet harum animi consectetur tempore fugit quibusdam quod nobis modi saepe odit.</p>
+      <h1 style="color:white; background-color: blue;text-align:center;" >Special Animation</h1>
+      
+      <div class="div">
+        <div>
+        <div class="div1">
+           <p> Linear</p>
+        </div>
+        <div class="div2">
+             <p>ease</p>
+        </div>
+        <div class="div3">
+            <p>ease-in</p>
+        </div>
+        <div class="div4">
+            <p>ease-out</p>
+        </div>
+        <div class="div5">
+            <p>ease-in-out</p>
+        </div>
+    </div>
+      </div>
+      <div class="gra">
+        <div class="grad"></div>
+      </div>
+      <!-- earth -->
+      <div class="earth">
+       <p style="padding:10px;"> Earth</p>
+    </div>
+</body>
+</html>
